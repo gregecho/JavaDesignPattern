@@ -44,7 +44,7 @@ public class XMLUtil {
 			Node classNode = nl.item(0).getFirstChild();
 			String cName = classNode.getNodeValue();
 
-			Class c = Class.forName(cName);
+			Class<?> c = Class.forName(cName);
 			Object obj = c.newInstance();
 			return obj;
 		} catch (Exception e) {
