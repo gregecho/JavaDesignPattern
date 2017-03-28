@@ -30,3 +30,20 @@
 简单工厂模式适用场景：
 >+ 工厂类负责创建的对象比较少，由于创建的对象较少，不会造成工厂方法中的业务逻辑太过复杂。例如，数据库连接字符串的管理。
 >+  客户端只知道传入工厂类的参数，对于如何创建对象并不关心。
+
+简单工厂模式中工厂类示例代码：
+```java
+public class ChartFacotry {
+	public static Chart getChart(String type){
+		Chart chart = null;
+		if(type.equalsIgnoreCase("pie")){
+			chart = new PieChart();
+		}else if(type.equalsIgnoreCase("line")){
+			chart = new LineChart();
+		}
+		return chart;
+	}
+}
+```
+
+
