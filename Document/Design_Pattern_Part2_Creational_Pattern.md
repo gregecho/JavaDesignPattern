@@ -66,7 +66,7 @@ public class ChartFacotry {
 类实例化。工厂方法模式让一个类的实例化延迟到其子类。工厂方法模式又简称为工厂模式(Factory Pattern)，又可称作虚拟构造器模式(Virtual Constructor Pattern)或多态工厂模式(Polymorphic Factory Pattern)。工厂方法模式是一种类创建型模式。
 
 工厂方法模式结构图：
-![简单工厂模式结构图](images/Factorymethod.jpg)
+![简单工厂模式结构图](images/FactoryMethod.jpg)
 
 工厂方法模式主要包含以下几个角色：
 >+ Product（抽象产品）：它是定义产品的接口，是工厂方法模式所创建对象的超类型，也就是产品对象的公共父类。
