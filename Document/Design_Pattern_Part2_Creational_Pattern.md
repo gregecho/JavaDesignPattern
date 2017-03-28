@@ -7,6 +7,7 @@
 > #### 适配器模式-Adapter Pattern ####
 > #### 桥接模式-Bridge Pattern ####
 
+-----
 ## 正文 ##
 ### 1. 工厂模式 ###
 #### 1.1 简单工厂模式-Simple Factory Pattern ####
@@ -45,5 +46,7 @@ public class ChartFacotry {
 	}
 }
 ```
+-----
 
+#### 1.2 工厂方法模式- Factory Method Pattern ####
 
