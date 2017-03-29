@@ -1,5 +1,6 @@
 ## 结构型模式 ##
-> #### 组合模式-Composite Pattern ####
+> #### 代理模式-Proxy Pattern ####
+
 
 
 -----
