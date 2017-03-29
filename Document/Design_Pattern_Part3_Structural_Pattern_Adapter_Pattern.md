@@ -1,145 +1,67 @@
-## 创建型模式 ##
-> #### 单例模式-Singleton Pattern ####
->+ 普通单例
->+ 饿汉单例
->+ 懒汉单例
->+ IoDH
+## 结构型模式 ##
+> #### 适配器模式-Adapter Pattern ####
+>>+ 对象适配器
+>>+ 类适配器
+
 
 -----
 ## 正文 ##
-### 1. 单例模式 ###
+### 1. 适配器模式 ###
 
-> 单例模式(Singleton Pattern)：确保某一个类只有一个实例，而且自行实例化并向整个系统提供这个实例，这个类称为单例类，它提供全局访问的方法。单例模式是一种对象创建型模式。
+> 适配器模式可以将一个类的接口和另一个类的接口匹配起来，而无须修改原来的适配者接口和抽象目标类接口。适配器模式定义如下：
+适配器模式(Adapter Pattern)：将一个接口转换成客户希望的另一个接口，使接口不兼容的那些类可以一起工作，其别名为包装器(Wrapper)。适配器模式既可以作为类结构型模式，也可以作为对象结构型模式。
 
-单例模式结构图中只包含一个单例角色：
->+ Singleton（单例）：在单例类的内部实现只生成一个实例，同时它提供一个静态的getInstance()工厂方法，让客户可以访问它的唯一实例；为了防止在外部对其实例化，将其构造函数设计为私有；在单例类内部定义了一个Singleton类型的静态对象，作为外部共享的唯一实例。
+#### 对象适配器 ####
+**在对象适配器模式中，适配器与适配者之间是关联关系；在类适配器模式中，适配器与适配者之间是继承（或实现）关系**。在实际开发中，对象适配器的使用频率更高，对象适配器模式结构如图所示：
+![适配器模式](images/adapterpattern.jpg)
 
-单例模式的主要优点：
->+ 单例模式提供了对唯一实例的受控访问。因为单例类封装了它的唯一实例，所以它可以严格控制客户怎样以及何时访问它。
->+ 由于在系统内存中只存在一个对象，因此可以节约系统资源，对于一些需要频繁创建和销毁的对象单例模式无疑可以提高系统的性能。
+在对象适配器模式结构图中包含如下几个角色：
+>+ Target（目标抽象类）：目标抽象类定义客户所需接口，可以是一个抽象类或接口，也可以是具体类。
+>+ Adapter（适配器类）：适配器可以调用另一个接口，作为一个转换器，对Adaptee和Target进行适配，适配器类是适配器模式的核心，在对象适配器中，它通过继承Target并关联一个Adaptee对象使二者产生联系。
+>+ Adaptee（适配者类）：适配者即被适配的角色，它定义了一个已经存在的接口，这个接口需要适配，适配者类一般是一个具体类，包含了客户希望使用的业务方法，在某些情况下可能没有适配者类的源代码。
 
-单例模式的主要缺点：
->+  由于单例模式中没有抽象层，因此单例类的扩展有很大的困难。
->+ 单例类的职责过重，在一定程度上违背了“单一职责原则”。因为单例类既充当了工厂角色，提供了工厂方法，同时又充当了产品角色，包含一些业务方法，将产品的创建和产品的本身的功能融合到一起。
+#### 类适配器 ####
+除了对象适配器模式之外，适配器模式还有一种形式，那就是类适配器模式，**类适配器模式和对象适配器模式最大的区别在于适配器和适配者之间的关系不同，对象适配器模式中适配器和适配者之间是关联关系，而类适配器模式中适配器和适配者是继承关系**，类适配器模式结构如图所示：
+![类适配器模式](images/classadapterpattern.jpg)
 
-单例模式适用场景：
->+  系统只需要一个实例对象，如系统要求提供一个唯一的序列号生成器或资源管理器，或者需要考虑资源消耗太大而只允许创建一个对象。
->+ 客户调用类的单个实例只允许使用一个公共访问点，除了该公共访问点，不能通过其他途径访问该实例。
-
-#### 1.1 普通单例 ####
-
-普通单例示例代码：
-```java
-class TaskManager  
-{  
-     private static TaskManager tm = null;  
-     private TaskManager() {……} //Make the constructor to private, outside can not new.
-     public void  displayProcesses() {……} 
-     public void  displayServices() {……}   
-	 // Provide singleton instance for outside
-     public static TaskManager getInstance()
-     {  
-        if (tm == null)  
-        {  
-            tm = new TaskManager();  
-        }  
-        return tm;  
-    }    
-}  
-```
-
-#### 1.2 饿汉单例 ####
-普通的单例模式会在对象初始化需要大量时间时（一般出现在多线程情况下），出现多个实例的情况。为了解决此问题，在普通单例的基础上出现了饿汉单例、懒汉单例、IoDH。
-
+典型的类适配器代码如下所示：
 ````java
-class EagerSingleton {   
-    private static final EagerSingleton instance = new EagerSingleton();   
-    private EagerSingleton() { }   
-  
-    public static EagerSingleton getInstance() {  
-        return instance;   
-    }     
-}  
-````
- 当类被加载时，静态变量instance会被初始化，此时类的私有构造函数会被调用，单例类的唯一实例将被创建。z这样就不会出现多个实例的情况。
-
- #### 1.3 懒汉单例 ####
-
-懒汉式单例在第一次调用getInstance()方法时实例化，在类加载时并不自行实例化，这种技术又称为**延迟加载(Lazy Load)技术**，即需要的时候再加载实例，为了避免多个线程同时调用getInstance()方法，我们可以使用关键字synchronized，代码如下所示：
-
-````java
-class LazySingleton {   
-    private static LazySingleton instance = null;   
-    private LazySingleton() { }   
-  
-    public static LazySingleton getInstance() {   
-    if (instance == null) {  
-        synchronized (LazySingleton.class) {  
-            instance = new LazySingleton();   
-        }  
-    }  
-    return instance;   
-}  
-}  
-`````
-
-假如在某一瞬间线程A和线程B都在调用getInstance()方法，此时instance对象为null值，均能通过instance == null的判断。由于实现了synchronized加锁机制，线程A进入synchronized锁定的代码中执行实例创建代码，线程B处于排队等待状态，必须等待线程A执行完毕后才可以进入synchronized锁定代码。但当A执行完毕时，线程B并不知道实例已经创建，将继续创建新的实例，导致产生多个单例对象，违背单例模式的设计思想，因此需要进行进一步改进，在synchronized中再进行一次(instance == null)判断，这种方式称为**双重检查锁定(Double-Check Locking)**。使用双重检查锁定实现的懒汉式单例类完整代码如下所示：
-
-````java
-class LazySingleton {   
-    private volatile static LazySingleton instance = null;   
-  
-    private LazySingleton() { }   
-  
-    public static LazySingleton getInstance() {   
-        //First check  
-        if (instance == null) {   
-            synchronized (LazySingleton.class) {  
-                //Second check  
-                if (instance == null) {  
-                    instance = new LazySingleton();
-                }  
-            }  
-        }  
-        return instance;   
+class Adapter extends Adaptee implements Target {  
+    public void request() {  
+        specificRequest();  
     }  
 }  
 ````
- #### 1.4  饿汉单例 vs 懒汉单例 ####
->+ 饿汉式单例类在类被加载时就将自己实例化，它的优点在于无须考虑多线程访问问题，可以确保实例的唯一性；从调用速度和反应时间角度来讲，由于单例对象一开始就得以创建，因此要优于懒汉式单例。但是无论系统在运行时是否需要使用该单例对象，由于在类加载时该对象就需要创建，因此从资源利用效率角度来讲，饿汉式单例不及懒汉式单例，而且在系统加载时由于需要创建饿汉式单例对象，加载时间可能会比较长。
->+ 懒汉式单例类在第一次使用时创建，无须一直占用系统资源，实现了延迟加载，但是必须处理好多个线程同时访问的问题，特别是当单例类作为资源控制器，在实例化时必然涉及资源初始化，而资源初始化很有可能耗费大量时间，这意味着出现多线程同时首次引用此类的机率变得较大，需要通过双重检查锁定等机制进行控制，这将导致系统性能受到一定影响。
 
-#### 1.5 Initialization Demand Holder (IoDH) ####
-通过使用IoDH，我们既可以实现延迟加载，又可以保证线程安全，不影响系统性能，不失为一种最好的Java语言单例模式实现方式（其缺点是与编程语言本身的特性相关，很多面向对象语言不支持IoDH）。
+适配器模式的主要优点：
+>+ 将目标类和适配者类解耦，通过引入一个适配器类来重用现有的适配者类，无须修改原有结构。
+>+ 增加了类的透明性和复用性，将具体的业务实现过程封装在适配者类中，对于客户端类而言是透明的，而且提高了适配者的复用性，同一个适配者类可以在多个不同的系统中复用。
+>+ 灵活性和扩展性都非常好，通过使用配置文件，可以很方便地更换适配器，也可以在不修改原有代码的基础上增加新的适配器类，完全符合“开闭原则”。
 
-在IoDH中，我们在单例类中增加一个静态(static)内部类，在该内部类中创建单例对象，再将该单例对象通过getInstance()方法返回给外部使用，实现代码如下所示：
-````java
-//Initialization on Demand Holder  
-class Singleton {  
-    private Singleton() {  
-    }  
-      
-    private static class HolderClass {  
-        private final static Singleton instance = new Singleton();  
-    }  
-      
-    public static Singleton getInstance() {  
-        return HolderClass.instance;  
-    }  
-      
-    public static void main(String args[]) {  
-        Singleton s1, s2;   
-        s1 = Singleton.getInstance();  
-        s2 = Singleton.getInstance();  
-        System.out.println(s1==s2);  
-    }  
-}  
-````
-编译并运行上述代码，运行结果为：true，即创建的单例对象s1和s2为同一对象。**由于静态单例对象没有作为Singleton的成员变量直接实例化，因此类加载时不会实例化Singleton，第一次调用getInstance()时将加载内部类HolderClass，在该内部类中定义了一个static类型的变量instance，此时会首先初始化这个成员变量，由Java虚拟机来保证其线程安全性，确保该成员变量只能初始化一次**。由于getInstance()方法没有任何线程锁定，因此其性能不会造成任何影响。
+类适配器模式的缺点如下：
+>+ 对于Java、C#等不支持多重类继承的语言，一次最多只能适配一个适配者类，不能同时适配多个适配者；
+>+ 适配者类不能为最终类，如在Java中不能为final类，C#中不能为sealed类；
+>+ 在Java、C#等语言中，类适配器模式中的目标抽象类只能为接口，不能为类，其使用有一定的局限性。
+
+对象适配器模式的缺点如下：
+>+ 
+
+适配器模式适用场景：
+>+ 系统需要使用一些现有的类，而这些类的接口（如方法名）不符合系统的需要，甚至没有这些类的源代码。
+>+ 想创建一个可以重复使用的类，用于与一些彼此之间没有太大关联的一些类，包括一些可能在将来引进的类一起工作。
+
+-----
+示例代码结构图：
+![示例代码结构图](images/adapterpatterndemo.jpg)
+
+示例代码：
+> [adapterpatterndemo源代码][1]    
+
+[1]: https://github.com/gregecho/JavaDesignPattern/tree/master/AdapterPattern/src/main
 
 -----
 ### TODO
-
+* [ ] 适配器模式在spring中的运用
 
 
 
