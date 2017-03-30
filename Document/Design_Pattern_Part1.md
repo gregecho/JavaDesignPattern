@@ -15,20 +15,20 @@
 
 | 类型                          | 模式名称                                    | 学习难度 | 使用频率 | 是否完成 |
 | ----------------------------- | ------------------------------------------- | -------- | -------- | ------|
-| 创建者模式-Creational Pattern | 单例模式-Singleton Pattern                  | ★☆☆☆☆    | ★★★★☆    | [x]      |
-| 创建者模式-Creational Pattern | 工厂方法模式-Factory Method Pattern         | ★★☆☆☆    | ★★★★★    | [x]      |
-| 创建者模式-Creational Pattern | 抽象工厂模式-Abstract Factory Pattern       | ★★★★☆    | ★★★★★    | [x]      |
+| 创建者模式-Creational Pattern | [单例模式-Singleton Pattern][1]              | ★☆☆☆☆    | ★★★★☆    | [x]      |
+| 创建者模式-Creational Pattern | [工厂方法模式-Factory Method Pattern][2]         | ★★☆☆☆    | ★★★★★    | [x]      |
+| 创建者模式-Creational Pattern | [抽象工厂模式-Abstract Factory Pattern][3]       | ★★★★☆    | ★★★★★    | [x]      |
 | 创建者模式-Creational Pattern | 原型模式-Prototype Pattern                  | ★★★☆☆    | ★★★☆☆    | [ ]      |
 | 创建者模式-Creational Pattern | 建造者模式-Builder Pattern                  | ★★★★☆    | ★★☆☆☆    | [ ]      |
-| 结构型模式-Structural Pattern | 适配器模式-Adapter Pattern                  | ★★☆☆☆    | ★★★★☆    | [x]      |
+| 结构型模式-Structural Pattern | [适配器模式-Adapter Pattern][4]            | ★★☆☆☆    | ★★★★☆    | [x]      |
 | 结构型模式-Structural Pattern | 桥接模式-Bridge Pattern                     | ★★★☆☆    | ★★★☆☆    | [ ]      |
-| 结构型模式-Structural Pattern | 组合模式-Composite Pattern                  | ★★★☆☆    | ★★★★☆    | [x]      |
+| 结构型模式-Structural Pattern | [组合模式-Composite Pattern][5]                  | ★★★☆☆    | ★★★★☆    | [x]      |
 | 结构型模式-Structural Pattern | 装饰模式-Decorator  Pattern                 | ★★★☆☆    | ★★★☆☆    | [ ]      |
-| 结构型模式-Structural Pattern | 外观模式-Façade  Pattern                    | ★☆☆☆☆    | ★★★★★    | [x]      |
+| 结构型模式-Structural Pattern | [外观模式-Façade  Pattern][6]                    | ★☆☆☆☆    | ★★★★★    | [x]      |
 | 结构型模式-Structural Pattern | 享元模式-Flyweight  Pattern                 | ★★★★☆    | ★☆☆☆☆    | [ ]      |
-| 结构型模式-Structural Pattern | 代理模式-Proxy  Pattern                     | ★★★☆☆    | ★★★★☆    | [ ]      |
+| 结构型模式-Structural Pattern | [代理模式-Proxy  Pattern][7]                     | ★★★☆☆    | ★★★★☆    | [ ]      |
 | 行为型模式                    | 职责链模式-Chain  of Responsibility Pattern | ★★★☆☆    | ★★☆☆☆    | [ ]      |
-| 行为型模式                    | 命令模式-Command  Pattern                   | ★★★☆☆    | ★★★★☆    | [ ]      |
+| 行为型模式                    | [命令模式-Command  Pattern][8]                   | ★★★☆☆    | ★★★★☆    | [ ]      |
 | 行为型模式                    | 解释器模式-Interpreter  Pattern             | ★★★★★    | ★☆☆☆☆    | [ ]      |
 | 行为型模式                    | 迭代器模式-Iterator  Pattern                | ★★★☆☆    | ★★★★★    | [ ]      |
 | 行为型模式                    | 中介者模式-Mediator  Pattern                | ★★★☆☆    | ★★☆☆☆    | [ ]      |
@@ -39,6 +39,14 @@
 | 行为型模式                    | 模板方法模式-Template  Method Pattern       | ★★☆☆☆    | ★★★☆☆    | [ ]      |
 | 行为型模式                    | 访问者模式-Visitor  Pattern                 | ★★★★☆    | ★☆☆☆☆    | [ ]      |
 
+[1]: https://github.com/gregecho/JavaDesignPattern/blob/master/Document/Design_Pattern_Part2_Creational_Pattern_Singleton_Pattern.md
+[2]: https://github.com/gregecho/JavaDesignPattern/blob/master/Document/Design_Pattern_Part2_Creational_Pattern_Factory_Pattern.md
+[3]: https://github.com/gregecho/JavaDesignPattern/blob/master/Document/Design_Pattern_Part2_Creational_Pattern_Factory_Pattern.md
+[4]: https://github.com/gregecho/JavaDesignPattern/blob/master/Document/Design_Pattern_Part3_Structural_Pattern_Adapter_Pattern.md
+[5]: https://github.com/gregecho/JavaDesignPattern/blob/master/Document/Design_Pattern_Part3_Structural_Pattern_Composite_Pattern.md
+[6]: https://github.com/gregecho/JavaDesignPattern/blob/master/Document/Design_Pattern_Part3_Structural_Pattern_Facade_Pattern.md
+[7]: https://github.com/gregecho/JavaDesignPattern/blob/master/Document/Design_Pattern_Part3_Structural_Pattern_Proxy_Pattern.md
+[8]: https://github.com/gregecho/JavaDesignPattern/blob/master/Document/Design_Pattern_Part4_Behavioral_Pattern_Command_Pattern.md
 
 ### 2. 面向对象设计原则 ###
 
