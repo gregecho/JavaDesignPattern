@@ -14,21 +14,21 @@
 
 
 | 类型                          | 模式名称                                    | 学习难度 | 使用频率 | 是否完成 |
-| ----------------------------- | ------------------------------------------- | -------- | -------- | ------|
-| 创建者模式-Creational Pattern | [单例模式-Singleton Pattern][1]              | ★☆☆☆☆    | ★★★★☆    | [x]      |
-| 创建者模式-Creational Pattern | [工厂方法模式-Factory Method Pattern][2]         | ★★☆☆☆    | ★★★★★    | [x]      |
-| 创建者模式-Creational Pattern | [抽象工厂模式-Abstract Factory Pattern][3]       | ★★★★☆    | ★★★★★    | [x]      |
+| ----------------------------- | ------------------------------------------- | -------- | -------- | -------- |
+| 创建者模式-Creational Pattern | [单例模式-Singleton Pattern][1]             | ★☆☆☆☆    | ★★★★☆    | [x]      |
+| 创建者模式-Creational Pattern | [工厂方法模式-Factory Method Pattern][2]    | ★★☆☆☆    | ★★★★★    | [x]      |
+| 创建者模式-Creational Pattern | [抽象工厂模式-Abstract Factory Pattern][3]  | ★★★★☆    | ★★★★★    | [x]      |
 | 创建者模式-Creational Pattern | 原型模式-Prototype Pattern                  | ★★★☆☆    | ★★★☆☆    | [ ]      |
 | 创建者模式-Creational Pattern | 建造者模式-Builder Pattern                  | ★★★★☆    | ★★☆☆☆    | [ ]      |
-| 结构型模式-Structural Pattern | [适配器模式-Adapter Pattern][4]            | ★★☆☆☆    | ★★★★☆    | [x]      |
+| 结构型模式-Structural Pattern | [适配器模式-Adapter Pattern][4]             | ★★☆☆☆    | ★★★★☆    | [x]      |
 | 结构型模式-Structural Pattern | 桥接模式-Bridge Pattern                     | ★★★☆☆    | ★★★☆☆    | [ ]      |
-| 结构型模式-Structural Pattern | [组合模式-Composite Pattern][5]                  | ★★★☆☆    | ★★★★☆    | [x]      |
+| 结构型模式-Structural Pattern | [组合模式-Composite Pattern][5]             | ★★★☆☆    | ★★★★☆    | [x]      |
 | 结构型模式-Structural Pattern | 装饰模式-Decorator  Pattern                 | ★★★☆☆    | ★★★☆☆    | [ ]      |
-| 结构型模式-Structural Pattern | [外观模式-Façade  Pattern][6]                    | ★☆☆☆☆    | ★★★★★    | [x]      |
+| 结构型模式-Structural Pattern | [外观模式-Façade  Pattern][6]               | ★☆☆☆☆    | ★★★★★    | [x]      |
 | 结构型模式-Structural Pattern | 享元模式-Flyweight  Pattern                 | ★★★★☆    | ★☆☆☆☆    | [ ]      |
-| 结构型模式-Structural Pattern | [代理模式-Proxy  Pattern][7]                     | ★★★☆☆    | ★★★★☆    | [ ]      |
+| 结构型模式-Structural Pattern | [代理模式-Proxy  Pattern][7]                | ★★★☆☆    | ★★★★☆    | [ ]      |
 | 行为型模式                    | 职责链模式-Chain  of Responsibility Pattern | ★★★☆☆    | ★★☆☆☆    | [ ]      |
-| 行为型模式                    | [命令模式-Command  Pattern][8]                   | ★★★☆☆    | ★★★★☆    | [ ]      |
+| 行为型模式                    | [命令模式-Command  Pattern][8]              | ★★★☆☆    | ★★★★☆    | [ ]      |
 | 行为型模式                    | 解释器模式-Interpreter  Pattern             | ★★★★★    | ★☆☆☆☆    | [ ]      |
 | 行为型模式                    | 迭代器模式-Iterator  Pattern                | ★★★☆☆    | ★★★★★    | [ ]      |
 | 行为型模式                    | 中介者模式-Mediator  Pattern                | ★★★☆☆    | ★★☆☆☆    | [ ]      |
