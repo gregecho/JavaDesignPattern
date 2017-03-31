@@ -30,7 +30,7 @@
 | 行为型模式                    | 职责链模式-Chain  of Responsibility Pattern | ★★★☆☆    | ★★☆☆☆    | [ ]      |
 | 行为型模式                    | [命令模式-Command  Pattern][8]              | ★★★☆☆    | ★★★★☆    | [ ]      |
 | 行为型模式                    | 解释器模式-Interpreter  Pattern             | ★★★★★    | ★☆☆☆☆    | [ ]      |
-| 行为型模式                    | 迭代器模式-Iterator  Pattern                | ★★★☆☆    | ★★★★★    | [ ]      |
+| 行为型模式                    | [迭代器模式-Iterator  Pattern][9]                | ★★★☆☆    | ★★★★★    | [ ]      |
 | 行为型模式                    | 中介者模式-Mediator  Pattern                | ★★★☆☆    | ★★☆☆☆    | [ ]      |
 | 行为型模式                    | 备忘录模式-Memento  Pattern                 | ★★☆☆☆    | ★★☆☆☆    | [ ]      |
 | 行为型模式                    | 观察者模式-Observer  Pattern                | ★★★☆☆    | ★★★★★    | [ ]      |
@@ -47,6 +47,7 @@
 [6]: https://github.com/gregecho/JavaDesignPattern/blob/master/Document/Design_Pattern_Part3_Structural_Pattern_Facade_Pattern.md
 [7]: https://github.com/gregecho/JavaDesignPattern/blob/master/Document/Design_Pattern_Part3_Structural_Pattern_Proxy_Pattern.md
 [8]: https://github.com/gregecho/JavaDesignPattern/blob/master/Document/Design_Pattern_Part4_Behavioral_Pattern_Command_Pattern.md
+[9]: https://github.com/gregecho/JavaDesignPattern/blob/master/Document/Design_Pattern_Part4_Behavioral_Pattern_Iterator_Pattern.md
 
 ### 2. 面向对象设计原则 ###
 
