@@ -33,7 +33,7 @@
 | 行为型模式                    | [迭代器模式-Iterator  Pattern][9]                | ★★★☆☆    | ★★★★★    | [ ]      |
 | 行为型模式                    | 中介者模式-Mediator  Pattern                | ★★★☆☆    | ★★☆☆☆    | [ ]      |
 | 行为型模式                    | 备忘录模式-Memento  Pattern                 | ★★☆☆☆    | ★★☆☆☆    | [ ]      |
-| 行为型模式                    | 观察者模式-Observer  Pattern                | ★★★☆☆    | ★★★★★    | [ ]      |
+| 行为型模式                    | [观察者模式-Observer  Pattern][10]                | ★★★☆☆    | ★★★★★    | [ ]      |
 | 行为型模式                    | 状态模式-State  Pattern                     | ★★★☆☆    | ★★★☆☆    | [ ]      |
 | 行为型模式                    | 策略模式-Strategy  Pattern                  | ★☆☆☆☆    | ★★★★☆    | [ ]      |
 | 行为型模式                    | 模板方法模式-Template  Method Pattern       | ★★☆☆☆    | ★★★☆☆    | [ ]      |
@@ -48,6 +48,7 @@
 [7]: https://github.com/gregecho/JavaDesignPattern/blob/master/Document/Design_Pattern_Part3_Structural_Pattern_Proxy_Pattern.md
 [8]: https://github.com/gregecho/JavaDesignPattern/blob/master/Document/Design_Pattern_Part4_Behavioral_Pattern_Command_Pattern.md
 [9]: https://github.com/gregecho/JavaDesignPattern/blob/master/Document/Design_Pattern_Part4_Behavioral_Pattern_Iterator_Pattern.md
+[10]: https://github.com/gregecho/JavaDesignPattern/blob/master/Document/Design_Pattern_Part4_Behavioral_Pattern_Observer_Pattern.md
 
 ### 2. 面向对象设计原则 ###
 
